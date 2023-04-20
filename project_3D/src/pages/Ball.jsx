@@ -1,35 +1,16 @@
 //ball animation without lamp
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { styles } from "../styles";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import gsap from 'gsap';
 import { Canvas, useFrame } from 'react-three-fiber';
 // import StarsCanvas from '../components/canvas/Stars'
-function Lamp() {
-  return (
-    <mesh>
-      <pointLight position={[0, 5, 0]} color={'#ffcc77'} intensity={5} distance={20} decay={2} />
-      <mesh position={[0, 0, 0]}>
-        <cylinderBufferGeometry attach="geometry" args={[0.2, 0.2, 2, 32]} />
-        <meshStandardMaterial attach="material" color={'#444444'} />
-      </mesh>
-      <mesh position={[0, 2, 0]}>
-        <sphereBufferGeometry attach="geometry" args={[0.4, 32, 32]} />
-        <meshStandardMaterial attach="material" color={'#cccccc'} />
-      </mesh>
-      <mesh position={[0, 2.5, 0]}>
-        <cylinderBufferGeometry attach="geometry" args={[0.1, 0.5, 0.5, 32]} />
-        <meshStandardMaterial attach="material" color={'#cccccc'} />
-      </mesh>
-    </mesh>
-  );
-}
-
 
 function Ball() {
   const canvasRef = useRef();
+  const [isMounted, setIsMounted] = useState(true);
 
   useEffect(() => {
     // Scene setup
@@ -58,10 +39,6 @@ function Ball() {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
 
-    // Lamp setup
-    const lamp = new Lamp();
-    scene.add(lamp);
-
     // Camera setup
     const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100);
     camera.position.z = 20;
@@ -71,6 +48,8 @@ function Ball() {
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(2);
+    renderer.autoClear = false;
+
 
     // Orbit controls setup
     const controls = new OrbitControls(camera, canvasRef.current);
@@ -91,8 +70,11 @@ function Ball() {
       renderer.setSize(sizes.width, sizes.height);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     });
+
+    setIsMounted(false);
     // Animation loop setup
     const animate = () => {
+      if (!isMounted) return;
       controls.update();
       renderer.render(scene, camera);
       window.requestAnimationFrame(animate);
