@@ -142,9 +142,9 @@ const experiences = [
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "HEAD GRAPHIC DESIGNER",
+    company_name: "Bemmy Technology Group",
+    icon: meta,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
@@ -155,9 +155,9 @@ const experiences = [
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "AND JUNIOR DEVELOPER",
+    company_name: "Ethio medicare",
+    icon: shopify,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [
@@ -173,25 +173,25 @@ const testimonials = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Dawit william",
-    designation: "COO",
-    company: "Ampol technologies",
+    name: "Bethel mul",
+    designation: "Manager",
+    company: "Amran hotel",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
+    name: "David William",
     designation: "COO",
-    company: "DEF Corp",
+    company: "Ampol technologies",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+    name: "Sara",
     designation: "CTO",
-    company: "456 Enterprises",
+    company: "Cache POS",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
