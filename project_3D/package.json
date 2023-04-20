@@ -1,10 +1,13 @@
 {
+  "homepage": "http://abenetsol.github,io/final-project/project_3D",
   "name": "3dfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -13,7 +16,6 @@
     "@react-three/drei": "^9.56.24",
     "@react-three/fiber": "^8.11.1",
     "framer-motion": "^9.0.7",
-    "gh-pages": "^5.0.0",
     "gsap": "^3.11.5",
     "maath": "^0.5.2",
     "react": "^18.2.0",
