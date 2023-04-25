@@ -169,7 +169,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "I thought it was impossible to make a website as beautiful as our product, but Job proved me wrong.",
     name: "Bethel mul",
     designation: "Manager",
     company: "Amran hotel",
@@ -177,7 +177,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "I've never met a web developer who truly cares about their clients' success like Abenet does.",
     name: "David William",
     designation: "COO",
     company: "Ampol technologies",
@@ -185,7 +185,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Job/Eyob optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Sara",
     designation: "CTO",
     company: "Cache POS",
