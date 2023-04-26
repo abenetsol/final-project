@@ -30,10 +30,14 @@ function Ball() {
     scene.add(mesh);
 
     // Light setup
-    const light = new THREE.PointLight(0xffffff, 1, 100);
-    light.position.set(30, 10, 10);
-    light.intensity = 1.25;
-    scene.add(light);
+    // const light = new THREE.PointLight(0xffffff, 1, 100);
+    // light.position.set(30, 10, 10);
+    // light.intensity = 1.25;
+    // scene.add(light);
+    let pointLight = new THREE.PointLight("#ffffff", 1);
+    pointLight.position.set(0, 10, 10);
+    pointLight.intensity = 0.7;
+    scene.add(pointLight);
 
     // Ambient light setup
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -42,6 +46,8 @@ function Ball() {
     // Camera setup
     const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 51);
     camera.position.z = 20;
+    // Set a reasonable fov value
+    camera.fov = 45;
     scene.add(camera);
 
 
@@ -132,7 +138,6 @@ const render = () => {
   requestAnimationFrame(render);
 };
 
-
 render();
 }, []);
 
@@ -146,7 +151,7 @@ return (
 }
 
 export default Ball;
-console.log(Ball);
+// console.log(Ball);
 
 
 
