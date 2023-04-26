@@ -1,20 +1,24 @@
 //ball animation without lamp
-
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { styles } from "../styles";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import gsap from 'gsap';
 import { Canvas, useFrame } from 'react-three-fiber';
+import BallMobile from './BallMobile'
 // import StarsCanvas from '../components/canvas/Stars'
 
 function Ball() {
   const canvasRef = useRef();
   const [isMounted, setIsMounted] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     // Scene setup
     const scene = new THREE.Scene();
+    // check if viewport is in mobile mode
+    // const isMobile = window.innerWidth < 768;
+    // setIsMobile(isMobile)
     const sizes = {
       width: window.innerWidth,
       height: window.innerHeight
@@ -23,7 +27,7 @@ function Ball() {
     // Sphere setup
     const geometry = new THREE.SphereGeometry(3, 64, 64);
     const material = new THREE.MeshStandardMaterial({
-      color: "#00ff83",
+      color: "#FDB813",
       roughness: 0.5
     });
     const mesh = new THREE.Mesh(geometry, material);
@@ -144,13 +148,15 @@ render();
 
 return (
   <div className="absolute">
-<Canvas ref={canvasRef} />
+    <Canvas ref={canvasRef} />
 {/* <StarsCanvas /> */}
 </div>
 );
 }
 
 export default Ball;
+
+
 // console.log(Ball);
 
 
