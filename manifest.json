@@ -1,6 +1,6 @@
 {
   "index.css": {
-    "file": "assets/index-b5794d24.css",
+    "file": "assets/index-59deb89a.css",
     "src": "index.css"
   },
   "index.html": {
@@ -27,9 +27,9 @@
       "assets/herobg-ecbfddc8.png"
     ],
     "css": [
-      "assets/index-b5794d24.css"
+      "assets/index-59deb89a.css"
     ],
-    "file": "assets/main-8e244ac0.js",
+    "file": "assets/main-c4eb1253.js",
     "isEntry": true,
     "src": "index.html"
   },
