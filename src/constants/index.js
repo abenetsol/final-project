@@ -119,7 +119,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "March 2018 - April 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Developing, testing, and maintaining code for websites, web applications, mobile applications, and other software programs using programming languages such as HTML, CSS, JavaScript, Python, Java, and more.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
@@ -132,9 +132,9 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining Mobile applications and Web applicaiton using flutter, react.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Developing, testing, and maintaining mobile applications for iOS, Android, and other platforms using programming languages such as Swift, Java, Kotlin, and more.",
+      "Collaborating with designers, project managers, and other stakeholders to ensure that the mobile application meets the needs of the organization and end-users.",
+      " Testing the mobile application in various environments, identifying and fixing bugs or errors using debugging tools, and collaborating with other developers to find solutions to complex problems.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
@@ -145,10 +145,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designing and developing visual concepts, including layout, typography, color schemes, and imagery, for a variety of media such as websites, print materials, social media, and advertisements.",
+      "Collaborating with other designers, project managers, clients, and other stakeholders to ensure that design projects meet the needs of the organization and end-users. This may involve attending meetings, providing input on design and functionality, and working together to solve problems.",
+      "Managing design projects from start to finish, including creating project timelines, assigning tasks to team members, and ensuring that design projects are completed on time and within budget.",
+      "Staying ahead of the curve by Staying current with the latest trends and developments in design by attending conferences, ",
     ],
   },
   {
@@ -158,10 +158,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Crafting, refining, and maintaining code for websites, web applications, mobile applications, and other software programs using programming languages such as HTML, CSS, JavaScript, Python, Java, and more.",
+      "Collaborating with designers, project managers, and other stakeholders to ensure that software projects meet the needs of the organization and end-users.",
+      "Utilizing debugging tools, investigating software performance in different environments, and working with other developers to solve complex issues.",
+      "Seeking out opportunities to stay up-to-date with new programming languages, frameworks, and tools by participating in training courses, attending tech conferences, and joining online developer communities.",
     ],
   },
 ];
@@ -185,7 +185,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Job/Eyob optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Job(Eyob) optimized our website, our traffic increased by 50%. We can't thank him enough!",
     name: "Sara",
     designation: "CTO",
     company: "Cache POS",

@@ -40,9 +40,13 @@ function Ball() {
     scene.add(ambientLight);
 
     // Camera setup
-    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 51);
     camera.position.z = 20;
     scene.add(camera);
+
+
+
+
 
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
@@ -71,21 +75,28 @@ function Ball() {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     });
 
-    setIsMounted(false);
-    // Animation loop setup
-    const animate = () => {
-      if (!isMounted) return;
-      controls.update();
-      renderer.render(scene, camera);
-      window.requestAnimationFrame(animate);
-    };
-    animate();
+    function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+animate();
+
+
+    // setIsMounted(false);
+    // // Animation loop setup
+    // const animate = () => {
+    //   if (!isMounted) return;
+    //   controls.update();
+    //   renderer.render(scene, camera);
+    //   window.requestAnimationFrame(animate);
+    // };
+    // animate();
 
     // Timeline animation setup
     const tl = gsap.timeline({ defaults: { duration: 1} });
-    tl.fromTo(mesh.scale, {z:0, x:0, y:0}, {z:1, x:1, y:1});
-    tl.fromTo('nav', {y: '-100%'}, {y: '0%'});
-    tl.fromTo(".title", {opacity: 0}, {opacity: 1});
+tl.fromTo(mesh.scale, {z:0, x:0, y:0}, {z:1, x:1, y:1});
+tl.fromTo('nav', {y: '-100%'}, {y: '0%'});
+tl.fromTo(".title", {opacity: 0}, {opacity: 1});
 
 // Update background color based on ambient light position
 const updateBackgroundColor = () => {
@@ -113,6 +124,7 @@ const updateBallPosition = () => {
   mesh.position.set(x, y, z);
 };
 
+
 const render = () => {
   updateBackgroundColor();
   updateBallPosition();
@@ -120,11 +132,13 @@ const render = () => {
   requestAnimationFrame(render);
 };
 
+
 render();
 }, []);
 
+
 return (
-<div className="absolute">
+  <div className="absolute">
 <Canvas ref={canvasRef} />
 {/* <StarsCanvas /> */}
 </div>
@@ -132,6 +146,7 @@ return (
 }
 
 export default Ball;
+console.log(Ball);
 
 
 
