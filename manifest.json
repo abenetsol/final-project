@@ -1,11 +1,11 @@
 {
   "index.css": {
-    "file": "assets/index-a2bb570b.css",
+    "file": "assets/index-8bcc95a0.css",
     "src": "index.css"
   },
   "index.html": {
     "assets": [
-      "assets/logo-c1063d16.svg",
+      "assets/logo-ec6ff777.png",
       "assets/backend-565fc01f.png",
       "assets/creator-dbbffaec.png",
       "assets/mobile-896ef2f5.png",
@@ -27,9 +27,9 @@
       "assets/herobg-ecbfddc8.png"
     ],
     "css": [
-      "assets/index-a2bb570b.css"
+      "assets/index-8bcc95a0.css"
     ],
-    "file": "assets/main-305c2b90.js",
+    "file": "assets/main-eb69b082.js",
     "isEntry": true,
     "src": "index.html"
   },
@@ -73,9 +73,9 @@
     "file": "assets/jobit-ecb9d39c.png",
     "src": "src/assets/jobit.png"
   },
-  "src/assets/logo.svg": {
-    "file": "assets/logo-c1063d16.svg",
-    "src": "src/assets/logo.svg"
+  "src/assets/logo.png": {
+    "file": "assets/logo-ec6ff777.png",
+    "src": "src/assets/logo.png"
   },
   "src/assets/menu.svg": {
     "file": "assets/menu-242d80a8.svg",
