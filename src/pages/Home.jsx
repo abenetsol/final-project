@@ -51,7 +51,7 @@ const Home = () => {
 			</motion.section>
 		)}
 
-		{snap.ball && <Ball/>}
+		{snap.ball && <Ball />}
 	</AnimatePresence>
 	</div>
 		<nav>

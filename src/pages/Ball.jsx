@@ -10,7 +10,7 @@ import BallMobile from './BallMobile'
 
 function Ball() {
   const canvasRef = useRef();
-  const [isMounted, setIsMounted] = useState(true);
+  // const [isMounted, setIsMounted] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function Ball() {
     scene.add(ambientLight);
 
     // Camera setup
-    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 51);
+    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 80);
     camera.position.z = 20;
     // Set a reasonable fov value
     camera.fov = 45;
@@ -141,8 +141,8 @@ render();
 
 
 return (
-  <div className="absolute">
-    <div className='fixed'>
+  <div className="ba">
+    <div className='ll'>
     <Canvas ref={canvasRef} />
     </div>
 {/* <StarsCanvas /> */}
