@@ -10,9 +10,9 @@ html {
 }
 
 
-Canvas {
+/* .rot-ball {
   position: fixed;
-}
+} */
 .webgl {
   position: absolute;
   top: 0;

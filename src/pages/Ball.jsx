@@ -142,7 +142,9 @@ render();
 
 return (
   <div className="absolute">
+    <div className='fixed'>
     <Canvas ref={canvasRef} />
+    </div>
 {/* <StarsCanvas /> */}
 </div>
 );
