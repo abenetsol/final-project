@@ -25,7 +25,7 @@ function Ball() {
     };
 
     // Sphere setup
-    const geometry = new THREE.SphereGeometry(3, 64, 64);
+    const geometry = new THREE.SphereGeometry(3, 32, 32);
     const material = new THREE.MeshStandardMaterial({
       color: "#FDB813",
       roughness: 0.5
@@ -33,15 +33,15 @@ function Ball() {
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
-    // Light setup
-    // const light = new THREE.PointLight(0xffffff, 1, 100);
-    // light.position.set(30, 10, 10);
-    // light.intensity = 1.25;
-    // scene.add(light);
-    let pointLight = new THREE.PointLight("#ffffff", 1);
-    pointLight.position.set(0, 10, 10);
-    pointLight.intensity = 0.7;
-    scene.add(pointLight);
+    //Light setup
+    const light = new THREE.PointLight(0xffffff, 1, 100);
+    light.position.set(30, 10, 10);
+    light.intensity = 1.25;
+    scene.add(light);
+    // let pointLight = new THREE.PointLight("#ffffff", 1);
+    // pointLight.position.set(0, 10, 10);
+    // pointLight.intensity = 0.7;
+    // scene.add(pointLight);
 
     // Ambient light setup
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -91,16 +91,8 @@ function Ball() {
 }
 animate();
 
-
-    // setIsMounted(false);
-    // // Animation loop setup
-    // const animate = () => {
-    //   if (!isMounted) return;
-    //   controls.update();
-    //   renderer.render(scene, camera);
-    //   window.requestAnimationFrame(animate);
-    // };
-    // animate();
+//mount code goes here
+    
 
     // Timeline animation setup
     const tl = gsap.timeline({ defaults: { duration: 1} });
@@ -135,6 +127,8 @@ const updateBallPosition = () => {
 };
 
 
+animate();
+
 const render = () => {
   updateBackgroundColor();
   updateBallPosition();
@@ -155,6 +149,18 @@ return (
 }
 
 export default Ball;
+
+//mount code
+// setIsMounted(false);
+    // // Animation loop setup
+    // const animate = () => {
+    //   if (!isMounted) return;
+    //   controls.update();
+    //   renderer.render(scene, camera);
+    //   window.requestAnimationFrame(animate);
+    // };
+    // animate();
+
 
 
 // console.log(Ball);
