@@ -26,7 +26,7 @@ function Ball() {
       
       //for mobile
 
-      const geometry = new THREE.SphereGeometry(3, 20, 20);
+      const geometry = new THREE.SphereGeometry(3, 64, 64);
     const material = new THREE.MeshStandardMaterial({
       color: "#FDB813",
       roughness: 0.5
@@ -35,18 +35,18 @@ function Ball() {
     scene.add(mesh);
 
     //Light setup
-    const light = new THREE.PointLight(0xffffff, 1, 100);
-    light.position.set(30, 10, 10);
-    light.intensity = 1.25;
-    scene.add(light);
-    // let pointLight = new THREE.PointLight("#ffffff", 1);
-    // pointLight.position.set(0, 10, 10);
-    // pointLight.intensity = 0.7;
-    // scene.add(pointLight);
+    // const light = new THREE.PointLight(0xffffff, 1, 100);
+    // light.position.set(30, 10, 10);
+    // light.intensity = 1.25;
+    // scene.add(light);
+    let pointLight = new THREE.PointLight("#ffffff", 1);
+    pointLight.position.set(0, 10, 10);
+    pointLight.intensity = 1.25;
+    scene.add(pointLight);
 
     // Ambient light setup
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
+    // const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    // scene.add(ambientLight);
 
     // Camera setup
     const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 80);
@@ -59,7 +59,7 @@ function Ball() {
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
     renderer.setSize(sizes.width, sizes.height);
-    renderer.setPixelRatio(1);
+    renderer.setPixelRatio(2);
     renderer.autoClear = false;
 
 
@@ -69,7 +69,8 @@ function Ball() {
     controls.enablePan = false;
     controls.enableZoom = false;
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 5;
+    controls.autoRotateSpeed = -6;
+
 
     // Resize listener setup
     window.addEventListener('resize', () => {
@@ -88,6 +89,13 @@ function Ball() {
   renderer.render(scene, camera);
 }
 animate();
+
+const loop = () => {
+  controls.update()
+  renderer.render(scene, camera);
+  window.requestAnimationFrame(loop);
+}
+loop()
 
 //mount code goes here
     
@@ -116,20 +124,20 @@ const updateBackgroundColor = () => {
 
 
 // Update ball position
-const updateBallPosition = () => {
-  const time = performance.now() / 2000;
-  const x = Math.sin(time * 2) * 8;
-  const y = Math.sin(time * 1.5) * 1.5;
-  const z = Math.sin(time * 1.2) * 8;
-  mesh.position.set(x, y, z);
-};
+// const updateBallPosition = () => {
+//   const time = performance.now() / 2000;
+//   const x = Math.sin(time * 2) * 8;
+//   const y = Math.sin(time * 1.5) * 1.5;
+//   const z = Math.sin(time * 1.2) * 8;
+//   mesh.position.set(x, y, z);
+// };
 
 
 animate();
 
 const render = () => {
-  updateBackgroundColor();
-  updateBallPosition();
+  // updateBackgroundColor();
+  // updateBallPosition();
   renderer.render(scene, camera);
   requestAnimationFrame(render);
 };
