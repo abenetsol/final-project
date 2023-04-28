@@ -27,7 +27,7 @@ function Ball() {
       
       //for mobile
 
-      const geometry = new THREE.SphereGeometry(3, 32, 32);
+      const geometry = new THREE.SphereGeometry(3, 64, 64);
     const material = new THREE.MeshStandardMaterial({
       color: "#FDB813",
       roughness: 0.5
@@ -60,7 +60,7 @@ function Ball() {
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
     renderer.setSize(sizes.width, sizes.height);
-    renderer.setPixelRatio(0.9);
+    renderer.setPixelRatio(2);
     renderer.autoClear = false;
 
 
