@@ -12,6 +12,7 @@ function Ball() {
   // const [isMounted, setIsMounted] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
+
   useEffect(() => {
     // Scene setup
     const scene = new THREE.Scene();
@@ -107,20 +108,20 @@ tl.fromTo('nav', {y: '-100%'}, {y: '0%'});
 tl.fromTo(".title", {opacity: 0}, {opacity: 1});
 
 // Update background color based on ambient light position
-const updateBackgroundColor = () => {
-  const ballWorldPos = new THREE.Vector3();
-  mesh.getWorldPosition(ballWorldPos);
-  const ballScreenPos = ballWorldPos.project(camera);
-  const screenCenterX = window.innerWidth / 2;
-  const screenCenterY = window.innerHeight / 2;
-  const deltaX = Math.abs(ballScreenPos.x - screenCenterX);
-  const deltaY = Math.abs(ballScreenPos.y - screenCenterY);
-  const maxDelta = Math.max(deltaX, deltaY);
-  const maxDeltaNormalized = maxDelta / Math.max(screenCenterX, screenCenterY);
-  const backgroundColor = new THREE.Color().setHSL(0.6, 1, 0.8 - maxDeltaNormalized * 0.3);
-  backgroundColor.set(backgroundColor.r, backgroundColor.g, backgroundColor.b, 0);
-  scene.background = backgroundColor;
-};
+// const updateBackgroundColor = () => {
+//   const ballWorldPos = new THREE.Vector3();
+//   mesh.getWorldPosition(ballWorldPos);
+//   const ballScreenPos = ballWorldPos.project(camera);
+//   const screenCenterX = window.innerWidth / 2;
+//   const screenCenterY = window.innerHeight / 2;
+//   const deltaX = Math.abs(ballScreenPos.x - screenCenterX);
+//   const deltaY = Math.abs(ballScreenPos.y - screenCenterY);
+//   const maxDelta = Math.max(deltaX, deltaY);
+//   const maxDeltaNormalized = maxDelta / Math.max(screenCenterX, screenCenterY);
+//   const backgroundColor = new THREE.Color().setHSL(0.6, 1, 0.8 - maxDeltaNormalized * 0.3);
+//   backgroundColor.set(backgroundColor.r, backgroundColor.g, backgroundColor.b, 0);
+//   scene.background = backgroundColor;
+// };
 
 
 // Update ball position
@@ -134,6 +135,12 @@ const updateBackgroundColor = () => {
 
 
 animate();
+
+renderer.domElement.addEventListener( 'webglcontextlost', function ( event ) {
+    event.preventDefault();
+    renderer.forceContextLoss();
+    console.log("WebGL context lost");
+}, false );
 
 const render = () => {
   // updateBackgroundColor();
@@ -248,6 +255,13 @@ const updateBallPosition = () => {
 
 
 animate();
+
+
+renderer.domElement.addEventListener( 'webglcontextlost', function ( event ) {
+    event.preventDefault();
+    renderer.forceContextLoss();
+    console.log("WebGL context lost");
+}, false );
 
 const render = () => {
   updateBackgroundColor();
