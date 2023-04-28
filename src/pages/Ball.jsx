@@ -27,7 +27,7 @@ function Ball() {
       
       //for mobile
 
-      const geometry = new THREE.SphereGeometry(3, 64, 64);
+      const geometry = new THREE.SphereGeometry(3, 32, 32);
     const material = new THREE.MeshStandardMaterial({
       color: "#FDB813",
       roughness: 0.5
@@ -60,7 +60,7 @@ function Ball() {
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
     renderer.setSize(sizes.width, sizes.height);
-    renderer.setPixelRatio(2);
+    renderer.setPixelRatio(0.9);
     renderer.autoClear = false;
 
 
@@ -139,7 +139,7 @@ animate();
 renderer.domElement.addEventListener( 'webglcontextlost', function ( event ) {
     event.preventDefault();
     renderer.forceContextLoss();
-    console.log("WebGL context lost");
+    console.log("WebGL context lost for the 2nd time");
 }, false );
 
 const render = () => {
@@ -260,7 +260,7 @@ animate();
 renderer.domElement.addEventListener( 'webglcontextlost', function ( event ) {
     event.preventDefault();
     renderer.forceContextLoss();
-    console.log("WebGL context lost");
+    console.log("WebGL context lost for the 2nd time");
 }, false );
 
 const render = () => {
